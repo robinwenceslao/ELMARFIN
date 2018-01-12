@@ -127,7 +127,9 @@
         
       <div class="col-sm-3 col-lg-3 col-md-2 col-xs-11">
       <label for="ex2">Email</label>
-          <asp:TextBox class="form-control" ID="text_email" runat="server" OnTextChanged="text_email_TextChanged"></asp:TextBox>
+
+          <asp:TextBox class="form-control" ID="text_email" runat="server" AutoPostBack="True"  OnTextChanged="text_email_TextChanged"  TextMode="MultiLine"></asp:TextBox>
+          <asp:Label runat="server" ID="lbl_error" Visible="true" ForeColor="Red" Text="error"></asp:Label>
       </div>
       
       

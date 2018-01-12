@@ -645,8 +645,7 @@
         <!-- //end contact content-->
         <!-- map section-->
         <div class="map-canvas">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d193572.00379171042!2d-73.97800350000001!3d40.70563080000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s87-89+E+4th+St%2C+New+York%2C+NY+10003%2C+Stati+Uniti!5e0!3m2!1sit!2sit!4v1416499866904">
-            </iframe>
+          <iframe src="https://www.google.com/maps?q=El Marfin Hotel and Pavilion &3 San Vicente, Sta. Maria, Bulacan, Santa Maria, 3022 Bulacan&output=embed"></iframe>
         </div>
         <!-- /end map section -->
          
