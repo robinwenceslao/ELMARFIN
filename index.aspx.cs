@@ -10,6 +10,8 @@ public partial class preview_dotnet_templates_newlook_index : System.Web.UI.Page
     string name = "";
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        string samplecodeforgithub = "";
         if (!Page.IsPostBack)
         {
             try
