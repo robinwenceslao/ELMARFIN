@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Net.Mail;
 using System.Net;
+using System.Drawing;
 
 public partial class Reservation : System.Web.UI.Page
 {
