@@ -70,7 +70,7 @@
                                     AutoPostBack="True" 
                                     OnSelectedIndexChanged="cbo_user_SelectedIndexChanged1"
                                                                                             
-                                    runat="server" CssClass="shortcode_button">                                  
+                                    runat="server" CssClass="btn btn-secondary dropdown-toggle">                                  
                                 </asp:DropDownList>
                                                                 
                             </li>
