@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Net.Mail;
 using System.Net;
+using System.Drawing;
 
 public partial class Reservation : System.Web.UI.Page
 {
@@ -228,6 +229,19 @@ public partial class Reservation : System.Web.UI.Page
 
     protected void text_email_TextChanged(object sender, EventArgs e)
     {
+        try
+        {
+            var emailChecked = new System.Net.Mail.MailAddress(text_email.Text);
+            lbl_error.Text = "Email available";
+            lbl_error.ForeColor = Color.Green;
+            text_email.Style.Add("Border" , "1px Solid green");
 
+        }
+        catch
+        {
+            lbl_error.Text = "Email not available";
+            lbl_error.ForeColor = Color.Red;
+            text_email.Style.Add("Border" , "1px Solid red");
+        }
     }
 }
