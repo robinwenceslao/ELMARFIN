@@ -27,7 +27,7 @@ public class DataAccess
     private string _sql_builder;
     private SqlTransaction _transaction;
     private bool _use_transaction = false;
-    string str = @"Data Source="+userinfo.IPADDRESS+";Initial Catalog=elmarfin;User ID=sa;Password=robin";
+    string str = @"Data Source="+userinfo.IPADDRESS+";Initial Catalog=elmarfin;User ID=sa;Password=abc123!@#";
     public DataAccess()
     {
         this.connect();

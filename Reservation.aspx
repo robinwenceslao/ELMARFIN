@@ -63,7 +63,7 @@
         <!--check in-->
        <div class="col-sm-3 col-lg-3 col-md-2 col-xs-11">
             <label id="Label2" class="control-label" for="datetimepicker">Check Out</label>
-            <asp:TextBox class="datetimepicker form-control" ID="txt_checkoutv" placeholder="YY/MM/DD/T" runat="server"></asp:TextBox>      
+            <asp:TextBox class="datetimepicker form-control" ID="txt_checkoutv" AutoPostBack="true" OnTextChanged="txt_checkoutv_TextChanged1" placeholder="YY/MM/DD/T" runat="server"></asp:TextBox>      
        
        </div>
        

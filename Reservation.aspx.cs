@@ -13,49 +13,62 @@ public partial class Reservation : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        setVisibleobject = false;
-        try
+        if (!IsPostBack)
         {
-            if (!Session["reservationtype"].ToString().Equals(""))
+            MsgBox("hi sample ",this.Page,this);
+
+            setVisibleobject = false;
+            if (txt_checkoutv.Text.Equals(""))
             {
-                try
+                btn_check_validity.Enabled = false;
+            }
+            else
+            {
+                btn_check_validity.Enabled = true;
+            }
+            try
+            {
+                if (!Session ["reservationtype"].ToString().Equals(""))
                 {
-                    cbo_reservationtype.SelectedIndex = reservationtype(Session["reservationtype"].ToString());
-                }
-                catch (Exception xx)
-                {
+                    try
+                    {
+                        cbo_reservationtype.SelectedIndex = reservationtype(Session ["reservationtype"].ToString());
+                    }
+                    catch (Exception xx)
+                    {
+
+                    }
+
 
                 }
-
 
             }
-           
-        }
-        catch (Exception xx) { 
-        
-        }
-
-        bool hasuser = !userinfo.Password.Equals("") && !userinfo.Username.Equals("");
-        if (hasuser)
-        {
-            Program.da.createCommand("select*  from elmarfin.dbo.reservation where username=@username and [password]=@password");
-            Program.da.addParameter("@username", userinfo.Username);
-            Program.da.addParameter("@password", userinfo.Password);
-            if (Program.da.fillCommand())
+            catch (Exception xx)
             {
-                DataTable dt = new DataTable();
-                dt = Program.da.getTable();
-                DataRow dr = dt.Rows[0];
-                txt_address.Text = dr["address"].ToString();
-                txt_first_name.Text = dr["firstname"].ToString();
-                txt_last_name.Text = dr["lastname"].ToString();
-                txt_middlename.Text = dr["middlename"].ToString();
-                text_contact_number.Text = dr["contactnumber"].ToString();
-                text_email.Text = dr["email"].ToString();
 
             }
+
+            bool hasuser = !userinfo.Password.Equals("") && !userinfo.Username.Equals("");
+            if (hasuser)
+            {
+                Program.da.createCommand("select*  from elmarfin.dbo.reservation where username=@username and [password]=@password");
+                Program.da.addParameter("@username" , userinfo.Username);
+                Program.da.addParameter("@password" , userinfo.Password);
+                if (Program.da.fillCommand())
+                {
+                    DataTable dt = new DataTable();
+                    dt = Program.da.getTable();
+                    DataRow dr = dt.Rows [0];
+                    txt_address.Text = dr ["address"].ToString();
+                    txt_first_name.Text = dr ["firstname"].ToString();
+                    txt_last_name.Text = dr ["lastname"].ToString();
+                    txt_middlename.Text = dr ["middlename"].ToString();
+                    text_contact_number.Text = dr ["contactnumber"].ToString();
+                    text_email.Text = dr ["email"].ToString();
+
+                }
+            }
         }
-       
         
 
     }
@@ -114,7 +127,7 @@ public partial class Reservation : System.Web.UI.Page
                     
                 }
 
-                Response.Redirect("http://localhost:2759/Assessment.aspx");
+                Response.Redirect("Assessment.aspx");
 
             }
 
@@ -243,5 +256,22 @@ public partial class Reservation : System.Web.UI.Page
             lbl_error.ForeColor = Color.Red;
             text_email.Style.Add("Border" , "1px Solid red");
         }
+    }
+    protected void txt_checkoutv_TextChanged1( object sender , EventArgs e )
+    {
+        if (txt_checkoutv.Text.Equals(""))
+        {
+            btn_check_validity.Enabled = false;
+        }
+        else {
+            btn_check_validity.Enabled = true;
+        }
+    }
+    public void MsgBox( String ex , Page pg , Object obj )
+    {
+        string s = "<SCRIPT language='javascript'>alert('" + ex.Replace("\r\n" , "\\n").Replace("'" , "") + "'); </SCRIPT>";
+        Type cstype = obj.GetType();
+        ClientScriptManager cs = pg.ClientScript;
+        cs.RegisterClientScriptBlock(cstype , s , s.ToString());
     }
 }

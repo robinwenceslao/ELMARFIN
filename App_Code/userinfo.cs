@@ -10,7 +10,7 @@ public class userinfo
 {
     public static string Username="";
     public static string Password = "";
-    public static string IPADDRESS = "192.168.1.33";
+    public static string IPADDRESS = "192.168.43.207";
 	public userinfo()
 	{
 		

@@ -21,7 +21,7 @@ public partial class Assessment : System.Web.UI.Page
                 {
                     DataTable dt = new DataTable();
                     dt = Program.da.getTable();
-                    ReportDataSource ds = new ReportDataSource("DataSet1", dt);
+                    ReportDataSource ds = new ReportDataSource("reservationdata" , dt);
                     ReportViewer1.LocalReport.DataSources.Add(ds);
                     ReportViewer1.LocalReport.ReportPath = "App_Code/report.rdlc";
 
