@@ -15,8 +15,7 @@ public partial class Reservation : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            MsgBox("hi sample ",this.Page,this);
-
+            lbl_error.Visible = false;
             setVisibleobject = false;
             if (txt_checkoutv.Text.Equals(""))
             {
@@ -242,16 +241,19 @@ public partial class Reservation : System.Web.UI.Page
 
     protected void text_email_TextChanged(object sender, EventArgs e)
     {
+        lbl_error.Visible = false;
         try
         {
             var emailChecked = new System.Net.Mail.MailAddress(text_email.Text);
             lbl_error.Text = "Email available";
             lbl_error.ForeColor = Color.Green;
             text_email.Style.Add("Border" , "1px Solid green");
+            lbl_error.Visible = true;
 
         }
         catch
         {
+            lbl_error.Visible = true;
             lbl_error.Text = "Email not available";
             lbl_error.ForeColor = Color.Red;
             text_email.Style.Add("Border" , "1px Solid red");
@@ -259,6 +261,7 @@ public partial class Reservation : System.Web.UI.Page
     }
     protected void txt_checkoutv_TextChanged1( object sender , EventArgs e )
     {
+
         if (txt_checkoutv.Text.Equals(""))
         {
             btn_check_validity.Enabled = false;
