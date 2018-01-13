@@ -21,7 +21,6 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/jquery.min.js"></script>
 
-   <!--sample robin-->
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/Custom-Cs.css" rel="stylesheet" type="text/css" />
@@ -162,10 +161,6 @@
                                                 <li><i class="fa fa-star-half-empty"></i></li>
                                             </ul>
                                         </div>
-                                        <div class="col-xs-3">
-                                            <tourtraveln class="booking-item-price-from">from</tourtraveln>
-                                            <tourtraveln class="booking-item-price">350php</tourtraveln>
-                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -193,10 +188,6 @@
                                                 <li><i class="fa fa-star-half-empty"></i></li>
                                             </ul>
                                         </div>
-                                        <div class="col-xs-3">
-                                            <tourtraveln class="booking-item-price-from">from</tourtraveln>
-                                            <tourtraveln class="booking-item-price">1k php</tourtraveln>
-                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -223,10 +214,6 @@
                                                 <li><i class="fa fa-star-half-empty"></i></li>
                                                 <li><i class="fa fa-star-o"></i></li>
                                             </ul>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <tourtraveln class="booking-item-price-from">from</tourtraveln>
-                                            <tourtraveln class="booking-item-price">150php</tourtraveln>
                                         </div>
                                     </div>
                                 </div>
