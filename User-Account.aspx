@@ -1,7 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Admin.aspx.cs" Inherits="Admin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="User-Account.aspx.cs" Inherits="User_Account" %>
 
 <!DOCTYPE html>
-<html lang="en">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin Page</title>
+    <title>User-Accounts</title>
 
     <!-- gridviewdesign -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/css/footable.min.css"
@@ -17,9 +18,9 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.min.js"></script>
     <script type="text/javascript">
-    $(function () {
-        $('[id*=GridView1]').footable();
-    });
+        $(function () {
+            $('[id*=GridView1]').footable();
+        });
     </script>
     <!-- gridviewdesign -->
 
@@ -81,7 +82,7 @@
 
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="#" class="active"><i class="fa fa-black-tie fa-fw"></i> Admin</a>
+                        <a href="Admin.aspx"><i class="fa fa-black-tie fa-fw"></i> Admin</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-user fa-fw"></i> Accounts<span class="fa arrow"></span></a>
@@ -119,7 +120,7 @@
                                         <a href="Admin-Account.aspx">Admin Account</a>
                                     </li>
                                     <li>
-                                        <a href="User-Account.aspx">User Accounts</a>
+                                        <a href="#" class="active">User Accounts</a>
                                     </li>
                                 </ul>
                             </li>
@@ -145,7 +146,7 @@
                         <div class="panel panel-default">
             <!-- ... Your content goes here ... -->
             <div class="panel-heading">
-               Reservations
+               User Accounts
             </div>
 
            <div>
@@ -186,4 +187,3 @@
 
 </body>
 </html>
-
